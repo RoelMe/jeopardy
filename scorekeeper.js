@@ -23,34 +23,6 @@ const player2 = {
     inc: document.querySelector('#btn2'),
     score: 0
 }
-// const backToBoard = document.querySelector('#back')
-
-
-/* clue.addEventListener('click', function() {
-    answer.classList.remove('hidden')
-}) */
-
-
-class JeopardyGame {
-    constructor(element) {
-        //Database
-        this.categories = []
-        this.clues = {}
-        this.players = []
-        
-        
-        //State
-        this.currentClue = null
-        this.score = 0
-        this.roundWinner = null //assign to player1, player2 or neither
-
-        //Elements
-        this.boardElement = element.querySelector("#main-board");        
-        this.turnElement = element.querySelector("#turn");
-        this.clueTextElement = element.querySelector("#clue-text");
-        this.resultElement = element.querySelector("#result");
-    }
-}
 
 let categories = []
 let params = (new URL(document.location)).searchParams;
@@ -88,8 +60,8 @@ for (let category of categories) {
     for (let clue of category.clues) {
         let score = clue.value
         const clueScreen = document.createElement('button')
-        clueScreen.innerText = `$${clue.value}`
-        clueScreen.classList.add('flex', 'justify-center', 'align-middle', 'bg-gradient-to-r', 'from-blue-800', 'via-blue-900', 'to-blue-800', 'font-bold', 'h-36', 'py-10', 'text-amber-400', 'text-6xl', 'align-middle', 'drop-shadow-md', 'shadow-black', 'cursor-pointer', 'border-b-2', 'border-slate-900')
+        clueScreen.innerHTML = `<div>$${clue.value}</div>`
+        clueScreen.classList.add('flex', 'justify-center', 'items-center', 'bg-gradient-to-r', 'from-blue-800', 'via-blue-900', 'to-blue-800', 'font-bold', 'h-24', '2xl:h-32', 'text-amber-400', 'text-4xl', '2xl:text-6xl', 'align-middle', 'drop-shadow-md', 'shadow-black', 'cursor-pointer', 'border-b-2', 'border-slate-900')
         
         clueList.append(clueScreen)
 
@@ -185,7 +157,7 @@ for (let category of categories) {
         })}
     
     /**create the columns for each category */    
-    catColumn.innerHTML = `<div class="flex items-center justify-center bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 font-bold h-32 border-b-4 border-slate-900 text-white text-3xl text-center">${category.title.toUpperCase()}</div>`
+    catColumn.innerHTML = `<div class="flex items-center justify-center bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 font-bold h-28 2xl:h-32 border-b-4 border-slate-900 text-white text-3xl 2xl:text-4xl text-center">${category.title.toUpperCase()}</div>`
     catColumn.append(clueList)
     board.append(catColumn)
 }

@@ -12,20 +12,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="bg-gradient-to-br from-slate-400 via-slate-600 to-slate-400 h-screen">
-     <header class="flex items-center justify-center pt-12">
-        <div class="text-center text-white font-bold text-5xl w-56">
+<body class="bg-gradient-to-br from-slate-400 via-slate-600 to-slate-400 min-h-screen bg-no-repeat bg-cover">
+     <header class="flex items-center justify-center pt-2 2xl:pt-12">
+        <div class="text-center text-white font-bold text-4xl 2xl:text-5xl w-56">
             <h1>PLAYER 1</h1>
-            <span id="p1" class="text-6xl">0</span>
+            <span id="p1" class="text-4xl 2xl:text-6xl">0</span>
         </div>
         <div class="mx-16 h-fit">
             <!-- <img src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2022/03/Jeopardy-Logo-Font-1.jpg?resize=1000%2C562&ssl=1" alt="Jeopardy"> -->
             <!-- <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9af4c12f-a0d9-48ab-a9d3-240148699eaf/de8tyl0-eb61f24a-337e-4a1e-9388-1b8003ef1f5f.png/v1/fill/w_1280,h_720,strp/_logo__jeopardy__logo_3d_recreation___remake_by_rapbattleeditor0510_de8tyl0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvOWFmNGMxMmYtYTBkOS00OGFiLWE5ZDMtMjQwMTQ4Njk5ZWFmXC9kZTh0eWwwLWViNjFmMjRhLTMzN2UtNGExZS05Mzg4LTFiODAwM2VmMWY1Zi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3Ttu_KIhDwouVs9gl-UMpbn1aKizHUIIC1u7rdwp0Dk" alt="Jeopardy" class="-my-24 h-72"> -->
-            <img src="https://www.rubyhill.com/sites/www.rubyhill.com/files/Ruby%20Hill%20Logo%202%20Color.png" alt="Jeopardy" class="h-48">
+            <img src="https://www.rubyhill.com/sites/www.rubyhill.com/files/Ruby%20Hill%20Logo%202%20Color.png" alt="Jeopardy" class="h-32 2xl:h-48">
         </div>
-        <div class="text-center text-white font-bold text-5xl w-56">
+        <div class="text-center text-white font-bold text-4xl 2xl:text-5xl w-56">
             <h1>PLAYER 2</h1>
-            <span id="p2" class="text-6xl">0</span>
+            <span id="p2" class="text-4xl 2xl:text-6xl">0</span>
         </div>
     </header>
 
@@ -135,7 +135,7 @@
     </div>
 
     <!--invisible overlay container for the question prompt-->
-    <div id="turn" class="hidden h-screen w-screen absolute top-0 flex items-center justify-center bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 font-bold text-white text-5xl text-center z-20">
+    <div id="turn" class="hidden h-screen w-screen absolute top-0 flex items-center justify-center bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 font-bold text-white text-3xl 2xl:text-5xl text-center z-20">
     <!-- <div id="turn" class="hidden h-screen w-screen absolute top-0 flex items-center justify-center font-bold text-white text-5xl text-center" style="background-image: url(./images/RH-bg-blue.png)"> -->
         <div id="turn-inner" class="w-1/2">
             <h2 id="clue-text" class="my-12 leading-normal">
@@ -146,15 +146,15 @@
                 <!--answer gets inserted here-->
             </h2>
             <div id="scoring" class="my-24">
-                <div class="flex justify-around mx-24">
+                <div class="flex justify-around mx-18 2xl:mx-24">
                     <div>
-                        <button class="bg-transparent px-8 py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300" id="btn1">PLAYER 1</button>
+                        <button class="bg-transparent px-4 py-2 2xl:px-8 2xl:py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300" id="btn1">PLAYER 1</button>
                     </div>
                     <div>
-                        <button class="bg-transparent px-8 py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300 mt-16" id="btn3">NO BLOOD</button>
+                        <button class="bg-transparent px-4 py-2 2xl:px-8 2xl:py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300 mt-16" id="btn3">NO BLOOD</button>
                     </div>
                     <div>
-                        <button class="bg-transparent px-8 py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300" id="btn2">PLAYER 2</button>
+                        <button class="bg-transparent px-4 py-2 2xl:px-8 2xl:py-3 border border-white hover:bg-white hover:text-blue-800 focus:bg-white focus:text-blue-800 ease-in duration-300" id="btn2">PLAYER 2</button>
                     </div>
                     
             </div>
