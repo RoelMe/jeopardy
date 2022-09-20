@@ -52,208 +52,23 @@ class JeopardyGame {
     }
 }
 
-const categories = [
-    {
-        title: 'Stranger Things',
-        clues: [
-            {
-                id: 1,
-                answer: 'Steve',
-                question: 'Who is the guy with good hair who drives the BMW 733?',
-                value: 200,
-                category_id: 1
-            },
-            {
-                id: 2,
-                answer: 'Nancy',
-                question: "What is the name of Mike's older sister?",
-                value: 400,
-                category_id: 1
-            },
-            {
-                id: 3,
-                answer: 'Hopper',
-                question: "What is the name of the police chief?",
-                value: 600,
-                category_id: 1 
-            },
-            {
-                id: 4,
-                answer: 'Joyce',
-                question: "What is the name of Will's mother?",
-                value: 800,
-                category_id: 1
-            },
-            {
-                id: 5,
-                answer: 'Eleven',
-                question: "What number does the girl from Hawkins Labs have tattoed on her arm?",
-                value: 1000,
-                category_id: 1
-            }
-        ]
-    },
-    {
-        title: "Sports in the 80's",
-        clues: [
-            {
-                id: 6,
-                answer: 'Ben Johnson',
-                question: "Which Canadian sprinter was disqualified from the 1988 Olympics after testing positive for steroids?",
-                value: 200,
-                category_id: 2
-            },
-            {
-                id: 7,
-                answer: 'Michael Jordan',
-                question: "Which 1985 rookie of the year would go on to lead the Chicago Bulls to win 6 NBA Championships?",
-                value: 400,
-                category_id: 2
-            },
-            {
-                id: 8,
-                answer: 'Joe Montana',
-                question: "Which 1980's football player for the San Francisco 49ers is considered by many the greatest quarterback of all time?",
-                value: 600,
-                category_id: 2
-            },
-            {
-                id: 9,
-                answer: 'John McEnroe',
-                question: "Which American tennis player was more infamous for his rants against umpires than for his Wimbledon victories?",
-                value: 800,
-                category_id: 2
-            },
-            {
-                id: 10,
-                answer: 'Greg Lemond',
-                question: "Which cyclist was the first American to win the Tour de France in 1986?",
-                value: 1000,
-                category_id: 2
-            }
-        ]
-    },
-    {
-        title: 'American History',
-        clues: [
-            {
-                id: 11,
-                answer: 'John Adams and Thomas Jefferson',
-                question: 'Which two signers of the Declaration of Independence went on to serve as president of the United States?',
-                value: 200,
-                category_id: 3
-            },
-            {
-                id: 12,
-                answer: 'Eleanor Roosevelt',
-                question: "Which First Lady made news by serving hot dogs when King George VI visited this her and her husband in 1939?",
-                value: 400,
-                category_id: 3
-            },
-            {
-                id: 13,
-                answer: 'Abraham Lincoln',
-                question: "Who was the first Republican President of the United States?",
-                value: 600,
-                category_id: 3 
-            },
-            {
-                id: 14,
-                answer: 'Bill Clinton',
-                question: "Who was the former American president that met with Kim Jong-il in August 2009 to help release two journalists?",
-                value: 800,
-                category_id: 3
-            },
-            {
-                id: 15,
-                answer: 'Susan B. Anthony',
-                question: "Who was the Quaker women who, in 1869, wrote in a women's suffrage newspaper: “Join the union, girls, and together say equal pay for equal work?",
-                value: 1000,
-                category_id: 3
-            }
-        ]
-    },
-    {
-        title: "Cornhole",
-        clues: [
-            {
-                id: 16,
-                answer: '27 feet',
-                question: "How far apart are official cornhole boards positioned from the front edge to front edge of the board?",
-                value: 200,
-                category_id: 4
-            },
-            {
-                id: 17,
-                answer: 'Woody',
-                question: "What do you call a cornhole bag that has been pitched and remains on the cornhole board playing surface at the conclusion of the frame?",
-                value: 400,
-                category_id: 4
-            },
-            {
-                id: 18,
-                answer: 'If a player pitches out of turn at any time during a frame, their pitch will be considered a Foul Bag and swept from the playing surface.',
-                question: "What happens if a player pitches out of turn?",
-                value: 600,
-                category_id: 4
-            },
-            {
-                id: 19,
-                answer: 'Any cornhole bag that leaves a players hand once the final step (if taken) and final forward swing of the delivery process has started, shall count as a pitched bag.',
-                question: "What happens when a player accidentally releases a bag?",
-                value: 800,
-                category_id: 4
-            },
-            {
-                id: 20,
-                answer: 'Slide',
-                question: "What do you call the type of shot that hits the center of the board and then slides into the hole?",
-                value: 1000,
-                category_id: 4
-            }
-        ]
-    },
-    {
-        title: "Hip Hop",
-        clues: [
-            {
-                id: 21,
-                answer: 'Sean John',
-                question: "What is the name of Puff Daddy / Diddy / P Diddy's streetwear clothing line?",
-                value: 200,
-                category_id: 5
-            },
-            {
-                id: 22,
-                answer: 'Jay-Z',
-                question: "Who was the first rapper honored in the Songwriters Hall of Fame, the first solo living rapper inducted in the Rock and Roll Hall of Fame, and one of the 100 most influential people in the world in 2013 according to Time Magazine?",
-                value: 400,
-                category_id: 5
-            },
-            {
-                id: 23,
-                answer: 'Juice WRLD',
-                question: "Which rapper had a triple platinum debut album 'Goodbye and Good Riddance' in 2018 and died following a drug overdose the following year?",
-                value: 600,
-                category_id: 5
-            },
-            {
-                id: 24,
-                answer: 'XXXTentacion',
-                question: "What is Jahseh Dwayne Ricardo Onfroy better known as? He started as a Soundcloud rapper in 2013 and was murdered at age 20 in 2018.",
-                value: 800,
-                category_id: 5
-            },
-            {
-                id: 25,
-                answer: 'Doja Cat',
-                question: "Who was the most streamed rapper of 2021 on Spotify? She outstreamed Drake to come on top with 63.6m monthly listeners.",
-                value: 1000,
-                category_id: 5
-            }
-        ]
+let categories = []
+let params = (new URL(document.location)).searchParams;
+for (let catId = 1; catId <= 5; catId++) {
+    let clues = []
+    // console.log(params.get(`cat${catId}`))
+    categories.push({title: params.get(`cat${catId}`),
+    clues})
+    // 
+    for (let clueId = 1; clueId <= 5; clueId++) {
+        clues.push({
+            id: clueId, 
+            answer: params.get(`cat${catId}__a${clueId}`),
+            question: params.get(`cat${catId}__q${clueId}`),
+            value: clueId * 200})
     }
-]
+
+}
 
 window.addEventListener('keydown', (e) => {
     if(e.key === 'a') {
