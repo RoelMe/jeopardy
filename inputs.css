@@ -6,6 +6,7 @@
     --clr-light-gray: hsl(0, 0%, 78%);
     --clr-accent: rgb(251 191 36);
     --clr-error: rgb(255, 10, 10);
+    --clr-Ruby: rgb(133,21,24);
     --clr-slate-400: rgb(148 163 184);
     --clr-slate-600: rgb(71 85 105);
     --clr-amber-400: rgb(251 191 36);
@@ -37,6 +38,12 @@ body {
 main {
     min-height: 100vh;
 }
+h1 {
+    font-family: 'Fontdiner Swanky', cursive;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--clr-Ruby);
+}
 button {
     cursor: pointer;
 }
@@ -50,7 +57,7 @@ button {
 }
 .image {
     height: 8rem;
-    margin-bottom: 1.5rem;
+    
 }
 .block {
     display: block;
