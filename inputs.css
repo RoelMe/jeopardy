@@ -42,9 +42,15 @@ button {
 }
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
     min-height: 100vh;
+    margin-top: 2rem;
+}
+.image {
+    height: 8rem;
+    margin-bottom: 1.5rem;
 }
 .block {
     display: block;
@@ -118,4 +124,9 @@ input, textarea {
     form textarea {
         min-width: 500px;
     }
+}
+@media (min-width: 1536px) {
+.image {
+    height: 12rem;
+}
 }
